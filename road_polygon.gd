@@ -13,3 +13,4 @@ func _resize():
 		Vector2(0, y0), Vector2(sz.x, y0),
 		Vector2(sz.x, sz.y), Vector2(0, sz.y)
 	])
+	

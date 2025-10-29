@@ -7,6 +7,7 @@ class_name Spawner
 @export var spawn_interval: float = 1.5       # seconds between ticks
 @export var burst_size: int = 1               # how many per tick
 @export var max_concurrent: int = 20
+@export var isAlly: bool = true
 
 var alive = 0
 func _ready() -> void:
@@ -32,7 +33,8 @@ func _on_timeout() -> void:
 
 func _spawn_one():
 	if alive < max_concurrent:
-		var parent = get_parent()
-		self.add_child(mob_scene.instantiate())
+		var mob = mob_scene.instantiate()
+		
+		self.add_child(mob)
 		#mob_scene.position = marker_2d.position
 		alive +=1

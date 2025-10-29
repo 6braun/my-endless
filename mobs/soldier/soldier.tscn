@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://bwibo33a7782p"]
 
-[ext_resource type="Script" uid="uid://bx8s61v2yenr4" path="res://soldier.gd" id="1_8swxs"]
+[ext_resource type="Script" uid="uid://bx8s61v2yenr4" path="res://mobs/soldier/soldier.gd" id="1_8swxs"]
 [ext_resource type="Texture2D" uid="uid://dwdcaxwtj47ee" path="res://assets/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_ba3fx"]
 [ext_resource type="Texture2D" uid="uid://dd8gfgowd13kv" path="res://assets/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="2_8swxs"]
 
@@ -122,6 +122,7 @@ animations = [{
 radius = 15.0
 
 [node name="Soldier" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_8swxs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -130,7 +131,8 @@ shape = SubResource("CircleShape2D_ba3fx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7h0ei")
 animation = &"Walk"
-frame_progress = 0.59422976
+autoplay = "Walk"
+frame_progress = 0.79109585
 
 [node name="Area2D" type="Area2D" parent="."]
 

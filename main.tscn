@@ -1,15 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chm16wtmecjs"]
+[gd_scene load_steps=3 format=3 uid="uid://chm16wtmecjs"]
 
 [ext_resource type="Script" uid="uid://b16vdkddgwmv5" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://57bkworwt0vh" path="res://level.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://clb1ud5wayw1w" path="res://spawner.tscn" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bwibo33a7782p" path="res://soldier.tscn" id="4_lquwl"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
 
 [node name="Level" parent="." instance=ExtResource("1_ig7tw")]
-
-[node name="SoldierSpawner" parent="." instance=ExtResource("3_1bvp3")]
-position = Vector2(97, 567)
-mob_scene = ExtResource("4_lquwl")

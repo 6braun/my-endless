@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://57bkworwt0vh"]
+[gd_scene load_steps=6 format=3 uid="uid://57bkworwt0vh"]
 
 [ext_resource type="Script" uid="uid://bhor7qrukmseu" path="res://sky_polygon.gd" id="1_u52ul"]
 [ext_resource type="Script" uid="uid://cqo1f8hrbsask" path="res://road_polygon.gd" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://clb1ud5wayw1w" path="res://spawner.tscn" id="3_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://bwibo33a7782p" path="res://mobs/soldier/soldier.tscn" id="4_f2txt"]
+[ext_resource type="PackedScene" uid="uid://bxyrl6gmxn23r" path="res://mobs/orc/orc.tscn" id="5_f2txt"]
 
 [node name="Level" type="Node2D"]
 
@@ -16,3 +19,11 @@ script = ExtResource("1_u52ul")
 [node name="RoadPolygon" type="Polygon2D" parent="Road"]
 color = Color(0.26666668, 0.26666668, 0.26666668, 1)
 script = ExtResource("2_vonw3")
+
+[node name="SoldierSpawner" parent="Road" instance=ExtResource("3_0b4ue")]
+position = Vector2(94, 576)
+mob_scene = ExtResource("4_f2txt")
+
+[node name="OrcSpawner" parent="Road" instance=ExtResource("3_0b4ue")]
+position = Vector2(957, 570)
+mob_scene = ExtResource("5_f2txt")
